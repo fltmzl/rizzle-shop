@@ -1,8 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import type { AppProps } from "next/app";
+import NextNProgress from "nextjs-progressbar";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <NextNProgress />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
